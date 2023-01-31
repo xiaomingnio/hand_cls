@@ -1,6 +1,9 @@
 # this is .gitignore file.
 # 以下是忽略的文件
 
+ckpt
 data
 handpose_x_gesture_v1
 repvgg_pretrain_models
+.idea
+__pycache__

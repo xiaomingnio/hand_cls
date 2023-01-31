@@ -36,7 +36,7 @@ parser.add_argument('--epochs', default=70, type=int, metavar='N',
                     help='number of total epochs to run')
 parser.add_argument('--start-epoch', default=0, type=int, metavar='N',
                     help='manual epoch number (useful on restarts)')
-parser.add_argument('-b', '--batch-size', default=512, type=int,
+parser.add_argument('-b', '--batch-size', default=256, type=int,
                     metavar='N',
                     help='mini-batch size (default: 256), this is the total '
                          'batch size of all GPUs on the current node when '
@@ -245,18 +245,6 @@ def main_worker(gpu, ngpus_per_node, args):
         else:
             print("=> no checkpoint found at '{}'".format(args.resume))
 
-    # cudnn.benchmark = True
-    #### change the classifier ######
-#    model.module.classifier = nn.Linear(in_features=1024, out_features=6, bias=True)
-    #print(model.module.classifier)
-    
-#    for name, layer in model.named_modules():
- #       print(name)
- #       if name == 'module.fc':
-  #          print("change classifier layer...")
-   #         layer.out_features = 6
-    # Data loading code
-    # print(model)
 
     normalize = transforms.Normalize(mean=[0.5, 0.5, 0.5],
                                      std=[0.5, 0.5, 0.5])
