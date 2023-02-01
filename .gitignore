@@ -1,6 +1,7 @@
 # this is .gitignore file.
 # 以下是忽略的文件
 
+wts
 ckpt
 data
 handpose_x_gesture_v1
