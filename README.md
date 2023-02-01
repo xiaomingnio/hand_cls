@@ -26,3 +26,6 @@ https://pan.baidu.com/s/1Sd-Ad88Wzp0qjGH6Ngah0g#list/path=%2F
 
 ### 生成wts
 `python genwts.py`
+
+### 测试
+`python test.py`
